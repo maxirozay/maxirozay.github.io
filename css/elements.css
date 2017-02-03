@@ -1,0 +1,14 @@
+html, body {
+  height: 100%;
+  -webkit-tap-highlight-color: transparent;
+}
+
+a {
+  text-decoration: none;
+  transition: color .15s ease-in;
+  color: white;
+}
+a:hover   {
+  transition: color .15s ease-in;
+  color: red;
+}
