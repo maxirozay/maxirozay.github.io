@@ -9,9 +9,20 @@
   <meta name="description" content="Maxi Rozay's webiste">
   <meta name="author" content="Maxime Rossier">
   <link rel="icon" type="image/ico" href="./favicon.ico"/>
-  <link href="./style.css" rel="stylesheet">
+  <link href="./css/style.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/tachyons@4.6.1/css/tachyons.min.css"/>
 </head>
-<body class="container">
-  <h1>Maxi Rozay</h1>
+<body class="bg-black">
+  <input id="toggle" type="checkbox" autocomplete="off">
+  <label class="toggle-container top-0 right-0 fixed pa3 z-1 tc pointer dn-ns" for="toggle">
+    <div class="bar1 bg-red"></div>
+    <div class="bar2 bg-green"></div>
+    <div class="bar3 bg-blue"></div>
+  </label>
+  <div class="drawer-left fixed top-0 w5 h-100 bg-near-black">
+    <a class="ph4 pv3 db f4" href="https://laruche.io">Laruche</a>
+    <a class="ph4 pv3 db f4" href="https://github.com/maxirozay">Github</a>
+    <a class="ph4 pv3 db f4" href="https://play.google.com/store/search?q=maxi%20rozay&c=apps">Google Play</a>
+  </div>
 </body>
 </html>
