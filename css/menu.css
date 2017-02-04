@@ -12,13 +12,12 @@
 #toggle:checked ~ .toggle-container .bar2 {transform: scale(0, 1);}
 #toggle:checked ~ .toggle-container .bar3 {transform: rotate(-45deg) translate(4px, -5px);}
 #toggle:checked ~ .drawer-left {
-  transition: 0.4s;
   left: 0;
 }
 
-@media screen and (max-width: 30em) {
+@media screen and (max-width: 60em) {
   .drawer-left {
-    transition: 0.4s;
+    transition: 1s;
     left: -100%;
   }
 }
