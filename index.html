@@ -1,32 +1,96 @@
 <!doctype html>
 
 <html lang="en-US">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Maxime Rossier</title>
-  <meta name="description" content="Maxi Rozay's webiste">
-  <meta name="author" content="Maxime Rossier">
-  <link rel="icon" type="image/ico" href="./favicon.ico"/>
-  <link href="./css/style.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://unpkg.com/tachyons@4.6.1/css/tachyons.min.css"/>
-</head>
-<body class="w-100 bg-black white dt">
-  <input id="toggle" type="checkbox" autocomplete="off">
-  <label class="toggle-container top-0 right-0 fixed pa3 z-1 tc pointer dn-l" for="toggle">
-    <div class="bar1 bg-red"></div>
-    <div class="bar2 bg-green"></div>
-    <div class="bar3 bg-blue"></div>
-  </label>
-  <div class="drawer-left fixed top-0 w-100 w5-l h-100 pv3 bg-dark-gray">
-    <a class="ph4 pv3 db f4" href="https://laruche.io">Laruche</a>
-    <a class="ph4 pv3 db f4" href="https://github.com/maxirozay">Github</a>
-    <a class="ph4 pv3 db f4" href="https://play.google.com/store/search?q=maxi%20rozay&c=apps">Google Play</a>
-    <a class="ph4 pv3 db f4" href="https://maxsmap.com">Max's map</a>
-    <a class="ph4 pv3 db f4" href="https://prealyse.com">Prealyse</a>
-    <a class="ph4 pv3 db f4" href="https://trader.prealyse.com">Trader</a>
-  </div>
-  <h1 class="tc dtc v-mid">Maxime Rossier<br><br>Software Engineer</h1>
-</body>
+    <title>Maxime Rossier</title>
+    <meta name="description" content="Maxi Rozay's webiste">
+    <meta name="author" content="Maxime Rossier">
+    <link rel="icon" type="image/ico" href="./favicon.ico"/>
+    <link href="./css/style.css" rel="stylesheet">
+  </head>
+  <body class="flex-row">
+    <section>
+      <nav class="absolute w">
+        <input
+          id="nav-toggle"
+          type="checkbox"
+        >
+        <label
+          class="toggle px2"
+          for="nav-toggle"
+        >
+          <div style="background-color: #f00;"></div>
+          <div style="background-color: #0f0;"></div>
+        </label>
+        <div class="content p1">
+          <a
+            class="mx"
+            href="https://github.com/maxirozay"
+          >
+            Github
+          </a>
+          <a
+            class="mx"
+            href="https://play.google.com/store/search?q=maxi%20rozay&c=apps"
+          >
+            Google Play
+          </a>
+          <a
+            class="mx"
+            href="https://maxirozay.github.io/goku"
+          >
+            Goku CSS
+          </a>
+          <a
+            class="mx"
+            href="https://maxsmap.com"
+          >
+            Max's map
+          </a>
+          <a
+            class="mx"
+            href="https://prealyse.com"
+          >
+            Prealyse
+          </a>
+          <a
+            class="mx"
+            href="https://trader.prealyse.com"
+          >
+            Trader
+          </a>
+        </div>
+      </nav>
+      <div class="flex flex-center h">
+        <h1 class="text-center">Maxime Rossier<br><br>Software Engineer</h1>
+      </div>
+    </section>
+    <section>
+      <iframe src="https://prealyse.com" frameborder="0"></iframe>
+    </section>
+    <section>
+      <iframe src="https://trader.prealyse.com" frameborder="0"></iframe>
+    </section>
+    <section>
+      <iframe src="https://maxsmap.com" frameborder="0"></iframe>
+    </section>
+    <section>
+      <iframe src="https://maxirozay.github.io/goku" frameborder="0"></iframe>
+    </section>
+    <button
+      class="fixed top bottom left button-icon my mx2"
+      onclick="newX = document.body.scrollLeft - innerWidth; newX -= newX % innerWidth; document.body.scroll({ left: newX < 0 ? innerWidth * 4 : newX })"
+    >
+      <div class="arrow-left"></div>
+    </button>
+    <button
+      class="fixed top bottom right button-icon my mx2"
+      onclick="newX = document.body.scrollLeft + innerWidth; newX -= newX % innerWidth; document.body.scroll({ left: newX > innerWidth * 4 ? 0 : newX })"
+    >
+      <div class="arrow-right"></div>
+    </button>
+  </body>
 </html>

@@ -1,6 +1,23 @@
 html, body {
-  height: 100%;
+  max-height: 100vh;
+  overflow-y: hidden;
   -webkit-tap-highlight-color: transparent;
+}
+body::-webkit-scrollbar {
+  display: none;
+}
+
+section {
+  height: 100vh;
+  min-width: 100vw;
+  padding: 0;
+  position: relative;
+}
+
+iframe {
+  height: 100%;
+  width: 100%;
+  display: block;
 }
 
 a {

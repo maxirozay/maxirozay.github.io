@@ -1,0 +1,28 @@
+#nav-toggle:checked ~ .content {
+  top: 0;
+  padding-top: .5em;
+}
+
+.button-icon {
+  border-radius: 100%;
+  width: 2em;
+  height: 2em;
+  background: var(--color-background);
+  border: 0;
+}
+
+.arrow-left,
+.arrow-right {
+  width: .5em;
+  height: .5em;
+  border: 2px solid var(--color-text);
+  border-top: none;
+  border-right: none;
+  display: inline-block;
+}
+.arrow-left {
+  transform: translateX(.1em) rotate(45deg);
+}
+.arrow-right {
+  transform: translateX(-.1em) rotate(-135deg);
+}
