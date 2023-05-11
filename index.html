@@ -25,7 +25,7 @@
           <div style="background-color: #f00;"></div>
           <div style="background-color: #0f0;"></div>
         </label>
-        <div class="content p1">
+        <div class="content">
           <a
             class="mx"
             href="https://github.com/maxirozay"
@@ -81,14 +81,14 @@
       <iframe src="https://maxirozay.github.io/goku" frameborder="0"></iframe>
     </section>
     <button
-      class="fixed top bottom left button-icon my mx2"
-      onclick="newX = document.body.scrollLeft - innerWidth; newX -= newX % innerWidth; document.body.scroll({ left: newX < 0 ? innerWidth * 4 : newX })"
+      class="fixed top bottom left button-icon my mx1"
+      onclick="newX = Math.round(document.body.scrollLeft) - innerWidth; newX -= newX % innerWidth; document.body.scroll({ left: newX < 0 ? innerWidth * 4 + 1 : newX })"
     >
       <div class="arrow-left"></div>
     </button>
     <button
-      class="fixed top bottom right button-icon my mx2"
-      onclick="newX = document.body.scrollLeft + innerWidth; newX -= newX % innerWidth; document.body.scroll({ left: newX > innerWidth * 4 ? 0 : newX })"
+      class="fixed top bottom right button-icon my mx1"
+      onclick="newX = Math.round(document.body.scrollLeft) + innerWidth; newX -= newX % innerWidth; document.body.scroll({ left: newX > innerWidth * 4 ? 0 : newX + 1 })"
     >
       <div class="arrow-right"></div>
     </button>
