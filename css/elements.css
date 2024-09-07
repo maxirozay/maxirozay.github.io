@@ -24,8 +24,5 @@ a {
   text-decoration: none;
   transition: color .15s ease-in;
   color: white;
-}
-a:hover   {
-  transition: color .15s ease-in;
-  color: red;
+  font-weight: bold;
 }

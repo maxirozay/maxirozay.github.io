@@ -9,36 +9,23 @@
     <meta name="description" content="Maxi Rozay's webiste">
     <meta name="author" content="Maxime Rossier">
     <link rel="icon" type="image/ico" href="./favicon.ico"/>
+    <link href="https://maximerossier.ch/goku/index.css" rel="stylesheet">
     <link href="./css/style.css" rel="stylesheet">
   </head>
   <body class="flex-row">
     <section>
-      <nav class="absolute w">
+      <nav class="absolute w p2">
         <input
           id="nav-toggle"
           type="checkbox"
         >
-        <label
-          class="toggle px2"
-          for="nav-toggle"
-        >
-          <div style="background-color: #f00;"></div>
-          <div style="background-color: #0f0;"></div>
-        </label>
-        <div class="content">
+        <div class="content w">
           <a
             class="mx"
             href="https://github.com/maxirozay"
             target="_blank"
           >
             Github
-          </a>
-          <a
-            class="mx"
-            href="https://play.google.com/store/apps/collection/cluster?gsr=Sh2yAhoKGAoUY29tLm1heGlyb3pheS5rZXltYXgQBw%3D%3D:S:ANO1ljK54TE"
-            target="_blank"
-          >
-            Google Play
           </a>
           <a
             class="mx"
@@ -49,7 +36,7 @@
           </a>
           <a
             class="mx"
-            href="https://maxsmap.com"
+            href="https://map.maximerossier.ch"
             target="_blank"
           >
             Max's map
@@ -73,9 +60,17 @@
             href="https://finance.prealyse.com"
             target="_blank"
           >
-            Finance management
+            Finance
           </a>
         </div>
+        <label
+          class="toggle ml"
+          for="nav-toggle"
+        >
+          <div></div>
+          <div></div>
+          <div></div>
+        </label>
       </nav>
       <div class="flex flex-center h">
         <h1 class="text-center">Maxime Rossier<br><br>Software Engineer</h1>
@@ -97,13 +92,13 @@
       <iframe src="https://maxirozay.github.io/goku" frameborder="0"></iframe>
     </section>
     <button
-      class="fixed top bottom left button-icon my mx1"
+      class="fixed top bottom left button-icon my mx2"
       onclick="newX = Math.round(document.body.scrollLeft) - innerWidth; newX -= newX % innerWidth; document.body.scroll({ left: newX < 0 ? innerWidth * 4 + 1 : newX })"
     >
       <div class="arrow-left"></div>
     </button>
     <button
-      class="fixed top bottom right button-icon my mx1"
+      class="fixed top bottom right button-icon my mx2"
       onclick="newX = Math.round(document.body.scrollLeft) + innerWidth; newX -= newX % innerWidth; document.body.scroll({ left: newX > innerWidth * 4 ? 0 : newX + 1 })"
     >
       <div class="arrow-right"></div>
