@@ -2,7 +2,7 @@
   border-radius: 100%;
   width: 3em;
   height: 3em;
-  background: #8883;
+  background: var(--g-fg-contrast);
   border: 0;
 }
 
@@ -10,7 +10,7 @@
 .arrow-right {
   width: .5em;
   height: .5em;
-  border: 2px solid var(--color-text);
+  border: 2px solid var(--g-fg);
   border-top: none;
   border-right: none;
   display: inline-block;
