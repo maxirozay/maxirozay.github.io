@@ -1,9 +1,12 @@
 .button-icon {
   border-radius: 100%;
-  width: 3em;
-  height: 3em;
+  width: 2.5em;
+  height: 2.5em;
   background: var(--g-fg-contrast);
   border: 0;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  padding: 0;
 }
 
 .arrow-left,
@@ -14,10 +17,5 @@
   border-top: none;
   border-right: none;
   display: inline-block;
-}
-.arrow-left {
-  transform: translateX(.1em) rotate(45deg);
-}
-.arrow-right {
-  transform: translateX(-.1em) rotate(-135deg);
+  transform: rotate(45deg);
 }
