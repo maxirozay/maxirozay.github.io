@@ -1,3 +1,4 @@
 :root {
-  --dark-color: #000;
+  --g-bg: light-dark(#fff, #000);
+  --g-gap3: 2em;
 }

@@ -1,6 +1,7 @@
 html, body {
   height: 100%;
   overflow-y: hidden;
+  scroll-snap-type: x mandatory;
   -webkit-tap-highlight-color: transparent;
 }
 body::-webkit-scrollbar {
@@ -13,6 +14,8 @@ section {
   padding: 0;
   position: relative;
   margin: 0;
+  scroll-snap-align: start;
+  scroll-snap-stop: always; 
 }
 
 iframe {
@@ -24,6 +27,5 @@ iframe {
 a {
   text-decoration: none;
   transition: color .15s ease-in;
-  color: white;
-  font-weight: bold;
+  color: var(--g-bg-contrast);
 }
