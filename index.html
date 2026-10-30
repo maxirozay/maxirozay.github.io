@@ -13,89 +13,103 @@
     <link href="./css/style.css" rel="stylesheet">
   </head>
   <body class="flex-row">
-    <section>
-      <nav
-        class="absolute w p3"
-        style="min-height: 46px;"
-      >
-        <input
-          id="nav-toggle"
-          type="checkbox"
+    <section class="text-center overflow-y">
+      <div>
+        <h1>MaxiBase</h1>
+        <p>Software development</p>
+      </div>
+      <div class="flex-column g3 p3">
+        <a
+          class="mx"
+          href="https://billdrop.ch"
+          target="_blank"
         >
-        <div class="content w">
-          <a
-            class="mx"
-            href="https://github.com/maxirozay"
-            target="_blank"
-          >
-            Github
-          </a>
-          <a
-            class="mx"
-            href="https://maxirozay.github.io/goku"
-            target="_blank"
-          >
-            Goku CSS
-          </a>
-          <a
-            class="mx"
-            href="https://billdrop.ch"
-            target="_blank"
-          >
-            BillDrop
-          </a>
-          <a
-            class="mx"
-            href="https://keytime.ch"
-            target="_blank"
-          >
-            Keytime
-          </a>
-          <a
-            class="mx"
-            href="https://map.maximerossier.ch"
-            target="_blank"
-          >
-            Max's map
-          </a>
-          <a
-            class="mx"
-            href="https://prealyse.com"
-            target="_blank"
-          >
-            Prealyse
-          </a>
-          <a
-            class="mx"
-            href="https://trader.prealyse.com"
-            target="_blank"
-          >
-            Trader
-          </a>
-          <a
-            class="mx"
-            href="https://finance.prealyse.com"
-            target="_blank"
-          >
-            Finance
-          </a>
-        </div>
-        <label
-          class="toggle ml"
-          for="nav-toggle"
+          <b>Billdrop</b>
+          <br>
+          <small>Accounting</small>
+        </a>
+        <a
+          class="mx"
+          href="https://resto.maxibase.ch"
+          target="_blank"
         >
-          <div></div>
-          <div></div>
-          <div></div>
-        </label>
-      </nav>
-      <div class="flex-column flex-center h">
-        <h1 class="text-center">Maxime Rossier</h1>
-        <h2>Software engineer</h2>
+          <b>MaxiResto</b>
+          <br>
+          <small>Restauration</small>
+        </a>
+        <a
+          class="mx"
+          href="https://shop.maxibase.ch"
+          target="_blank"
+        >
+          <b>MaxiShop</b>
+          <br>
+          <small>Online shopping</small>
+        </a>
+        <a
+          class="mx"
+          href="https://keytime.ch"
+          target="_blank"
+        >
+          <b>Keytime</b>
+          <br>
+          <small>Geneva made watches</small>
+        </a>
+        <a
+          class="mx"
+          href="https://prealyse.com"
+          target="_blank"
+        >
+          <b>Prealyse</b>
+          <br>
+          <small>Crypto prices analysis</small>
+        </a>
+        <a
+          class="mx"
+          href="https://trader.prealyse.com"
+          target="_blank"
+        >
+          <b>Trader</b>
+          <br>
+          <small>Automated crypto trading</small>
+        </a>
+        <a
+          class="mx"
+          href="https://finance.prealyse.com"
+          target="_blank"
+        >
+          <b>Finance</b>
+          <br>
+          <small>Personal finance management</small>
+        </a>
+        <a
+          class="mx"
+          href="https://map.maximerossier.ch"
+          target="_blank"
+        >
+          <b>Max's map</b>
+          <br>
+          <small>Map based social media</small>
+        </a>
+        <a
+          class="mx"
+          href="https://maxirozay.github.io/goku"
+          target="_blank"
+        >
+          <b>Goku CSS</b>
+          <br>
+          <small>CSS framework</small>
+        </a>
       </div>
     </section>
     <section>
       <iframe src="https://billdrop.ch" frameborder="0"></iframe>
+    </section>
+    <section>
+      <iframe src="https://resto.maxibase.ch" frameborder="0"></iframe>
+    </section>
+    <section>
+      <iframe src="https://shop.maxibase.ch" frameborder="0"></iframe>
     </section>
     <section>
       <iframe src="https://keytime.ch" frameborder="0"></iframe>
@@ -117,15 +131,34 @@
     </section>
     <button
       class="fixed top bottom left button-icon my"
-      onclick="newX = Math.round(document.body.scrollLeft) - innerWidth; newX -= newX % innerWidth; document.body.scroll({ left: newX < 0 ? innerWidth * 4 + 1 : newX })"
+      onclick="goTo(current - 1)"
     >
       <div class="arrow-left"></div>
     </button>
     <button
       class="fixed top bottom right button-icon my mirror"
-      onclick="newX = Math.round(document.body.scrollLeft) + innerWidth; newX -= newX % innerWidth; document.body.scroll({ left: newX > innerWidth * 4 ? 0 : newX + 1 })"
+      onclick="goTo(current + 1)"
     >
       <div class="arrow-right"></div>
     </button>
+    <script>
+      const count = document.querySelectorAll('section').length
+      let current = 0
+      let width = innerWidth
+
+      function goTo (index) {
+        current = (index + count) % count
+        document.body.scroll({ left: current * innerWidth })
+      }
+
+      document.body.addEventListener('scroll', () => {
+        if (innerWidth === width) current = Math.round(document.body.scrollLeft / width)
+      })
+
+      window.addEventListener('resize', () => {
+        width = innerWidth
+        document.body.scroll({ left: current * width })
+      })
+    </script>
   </body>
 </html>
